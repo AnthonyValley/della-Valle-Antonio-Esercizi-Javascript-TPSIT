@@ -1,53 +1,41 @@
-/* Stili CSS per sfondo e layout - Contenitore Centrato Verticalmente */
-
-/* Impostazioni di base per html e body per l'altezza e lo scroll */
 html {
-    height: 100%; /* Assicura che l'html occupi il 100% dell'altezza della viewport */
-    overflow-y: auto; /* Permette lo scroll solo sull'html se necessario */
+    height: 100%; 
+    overflow-y: auto; 
 }
 
 body {
     margin: 0;
-    padding: 0; /* Rimuove padding e margini dal body */
-    height: 100%; /* Il body occupa il 100% dell'altezza del suo genitore (html) */
+    padding: 0; 
+    height: 100%;
     font-family: sans-serif;
     line-height: 1.6;
-    color: #ffffff; /* Colore del testo bianco per contrasto */
-    /* Sfondo sfumato applicato al body */
+    color: #ffffff;
     background: linear-gradient(to bottom, #1a2a5a, #000000);
-    background-attachment: fixed; /* Mantiene lo sfondo fisso durante lo scroll */
-
-    /* Flexbox per centrare il contenuto .container */
+    background-attachment: fixed;
     display: flex;
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* CAMBIATO: Centra verticalmente il contenuto del body */
+    justify-content: center;
+    align-items: center;
 
-    /* Importante: Rimuoviamo overflow-y: auto dal body per gestirlo sull'html */
 }
 
 .container {
-    background-color: #1e1e1e; /* Sfondo leggermente più chiaro del body per il contenitore */
-    padding: 30px; /* Spazio interno al contenitore */
-    border-radius: 10px; /* Angoli arrotondati */
-    max-width: 800px; /* Larghezza massima del contenitore */
-    width: 100%; /* Occupa tutta la larghezza disponibile fino al max-width */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ombra leggera */
-    /* Rimossi i margini top e bottom per permettere la centratura perfetta */
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
-    box-sizing: border-box; /* Include padding e border nel calcolo della larghezza/altezza */
-    flex-shrink: 0; /* Impedisce al container di rimpicciolirsi sotto il suo contenuto minimo */
-    /* Puoi aggiungere un margin-top e margin-bottom se vuoi comunque uno spazio fisso sopra/sotto */
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; 
+    flex-shrink: 0;
 }
 
 h1, h2 {
-    border-bottom: 1px solid #444; /* Colore del bordo più chiaro per sfondo scuro */
+    border-bottom: 1px solid #444;
     padding-bottom: 5px;
     margin-top: 20px;
-    color: #ffffff; /* Colore del titolo bianco */
+    color: #ffffff;
 }
 
-/* Assicurati che gli input e i button siano visibili */
 input[type="text"], button {
     padding: 10px;
     margin-right: 10px;
@@ -59,7 +47,7 @@ input[type="text"], button {
 
 button {
     cursor: pointer;
-    background-color: #007bff; /* Blu per il pulsante */
+    background-color: #007bff;
     border-color: #007bff;
 }
 
@@ -89,16 +77,15 @@ label {
     margin-right: 10px;
 }
 
-/* Piccoli aggiustamenti per mobile */
 @media (max-width: 600px) {
     body {
         padding: 10px;
-        /* Rimuovere padding dal body se causa scrollbar indesiderate */
-        padding: 0; /* Meglio gestire il padding sul container */
+       
+        padding: 0;
     }
     .container {
         padding: 15px;
-        margin-top: 10px; /* Metti i margini qui se vuoi spazio sopra/sotto su mobile */
+        margin-top: 10px; 
         margin-bottom: 10px;
     }
     input[type="text"], button {
