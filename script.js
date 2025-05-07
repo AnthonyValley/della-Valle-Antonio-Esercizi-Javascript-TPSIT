@@ -1,4 +1,3 @@
-// Il codice JavaScript rimane invariato
 // ESERCIZIO 1 – Controllo numerico
 console.log("--- ESERCIZIO 1 ---");
 function controllaNumero(num) {
